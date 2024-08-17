@@ -1,6 +1,14 @@
 package com.example.demo;
 
 public class Book {
+
+    public Book(String name, String author, String publishingHouse, double price) {
+        this.name = name;
+        this.author = author;
+        this.publishingHouse = publishingHouse;
+        this.price = price;
+    }
+
     private String name;
     private String author;
     private String publishingHouse;
@@ -24,12 +32,12 @@ public class Book {
         this.author = author;
     }
 
-    public String getEditura() {
+    public String getPublishingHouse() {
         return publishingHouse;
     }
 
-    public void setEditura(String editura) {
-        this.publishingHouse = editura;
+    public void setPublishingHouse(String publishingHouse) {
+        this.publishingHouse = publishingHouse;
     }
 
     public double getPrice() { return price; }

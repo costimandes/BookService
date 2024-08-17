@@ -9,6 +9,11 @@ import java.util.List;
 public class BookService {
 
     List<Book> books = new ArrayList<>();
+
+    public BookService(){
+        this.books.add(new Book("TestName", "TestAuthor", "TestPublishingHouse",100.0));
+        this.books.add(new Book("TestNameCCC", "TestAuthorCCC", "TestPublishingHouseCCC",200.0));
+    }
     public List<Book> getBooks() {
         return books;
     }
@@ -43,7 +48,7 @@ public class BookService {
         for (Book book : books) {
             if (book.getName().equals(nume)) {
                 book.setName(newBook.getName());
-                book.setEditura(newBook.getEditura());
+                book.setPublishingHouse(newBook.getPublishingHouse());
                 book.setAuthor(newBook.getAuthor());
                 book.setPrice(newBook.getPrice());
             }
